@@ -10,8 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class UserController {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/test")
-    public String test() {
-        return "test";
+    @RequestMapping(method = RequestMethod.GET, value = "/login")
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/welcome")
+    public String welcome() {
+        return "welcome";
     }
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>User Login</title>
+    <link rel="stylesheet" th:href="@{/lib/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="text-center">User Login</h1>
+                <p>&nbsp;</p>
+                <form class="form-horizontal" th:action="@{/login}" method="post">
+                    <div class="form-group">
+                        <label for="username" class="col-sm-4 control-label">Username:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Please enter username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-4 control-label">Password:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="And your password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-sm-8 col-sm-offset-4">
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script th:src="@{/lib/jquery/jquery.min.js}"></script>
+    <script th:src="@{/lib/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
